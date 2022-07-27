@@ -1,6 +1,6 @@
 package model;
 
-public class FrieseToerist extends Wachter {
+public class FrieseToerist extends Toerist {
     public FrieseToerist(HuisjeVrijNL huisjeVrijNL) {
         this.huisjeVrijNL = huisjeVrijNL;
         this.huisjeVrijNL.attach(this);

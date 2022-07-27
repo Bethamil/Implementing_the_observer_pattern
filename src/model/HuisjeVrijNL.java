@@ -9,8 +9,8 @@ import java.util.List;
  * Dit doet het programma
  */
 public class HuisjeVrijNL {
-    private List<Wachter> wachters = new ArrayList<Wachter>();
-    private List<Huis> huizen = new ArrayList<Huis>();
+    private final List<Toerist> toeristen = new ArrayList<>();
+    private final List<Huis> huizen = new ArrayList<>();
 
     public List<Huis> getHuizen() {
         return huizen;
@@ -21,12 +21,12 @@ public class HuisjeVrijNL {
         notifyAllWachters();
     }
 
-    public void attach(Wachter wachter) {
-        wachters.add(wachter);
+    public void attach(Toerist wachter) {
+        toeristen.add(wachter);
     }
 
     public void notifyAllWachters() {
-        for (Wachter wachter : wachters) {
+        for (Toerist wachter : toeristen) {
             wachter.update();
         }
     }
